@@ -7,6 +7,8 @@ import sys
 
 from settings import * # Creates and link to the settings.py file
 from map import * # Creates a link to the map.py file
+from player import *
+from raycasting import *
 
 # Main class below.
 class Game:
@@ -17,19 +19,25 @@ class Game:
         pg.init()
         self.screen = pg.display.set_mode(RES) # This sets the resolution set out in the settings.py file.
         self.clock = pg.time.Clock() # This controls the frame rate
+        self.delta_time = 1 # Delta Time is the amount of time that has passed since the last frame
         self.new_game()
 
     def new_game(self):
         self.map = Map(self)
+        self.player = Player(self)
+        self.raycasting = RayCasting(self)
 
     def update(self):
+        self.player.update()
+        self.raycasting.update()
         pg.display.flip()
-        self.clock.tick(FPS)
+        self.delta_time = self.clock.tick(FPS)
         pg.display.set_caption(f'cDoom FPS: {self.clock.get_fps() :.1f}') # This shows the FPS on the bar at the top of the Window
 
     def draw(self):
         self.screen.fill('black') # This controls the background colour
         self.map.draw() # This draws the map from map.py
+        self.player.draw()
 
     def check_events(self):
         for event in pg.event.get():
