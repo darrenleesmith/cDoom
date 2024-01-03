@@ -6,6 +6,10 @@ import math
 # pygame - https://pypi.org/project/pygame/
 # math - https://docs.python.org/3/library/math.html
 
+### ASSETS! ###
+# https://www.realm667.com/en/
+# Use SLADE to expert .WAD packages to singe .PNG files.
+
 class Player:
     def __init__(self, game):
         self.game = game

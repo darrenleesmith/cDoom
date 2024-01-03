@@ -6,7 +6,7 @@ import math
 RES = WIDTH, HEIGHT = 1600, 900 # resolution
 HALF_WIDTH = WIDTH // 2
 HALF_HEIGHT = HEIGHT // 2
-FPS = 60 # game frames per second, this can be changed to 0 for unlimited (Hardware limitations)
+FPS = 0 # game frames per second, this can be changed to 0 for unlimited (Hardware limitations)
 
 # Player settings:
 PLAYER_POS = 1.5, 5 # mini map
