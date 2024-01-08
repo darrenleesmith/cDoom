@@ -38,7 +38,7 @@ class Game:
         pg.display.set_caption(f'cDoom FPS: {self.clock.get_fps() :.1f}') # This shows the FPS on the bar at the top of the Window
 
     def draw(self):
-        self.screen.fill('black') # This controls the background colour
+        self.screen.fill('dark grey') # This controls the background colour
         self.object_renderer.draw()
         #self.map.draw() # This draws the map from map.py
         #self.player.draw()
