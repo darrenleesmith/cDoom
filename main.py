@@ -18,6 +18,7 @@ class Game:
     # __init__: This is the name of the special method that serves as the constructor.
     # (self): The self parameter is a reference to the instance of the class. It allows you to refer to the instance's attributes and methods within the class.
         pg.init()
+        pg.mouse.set_visible(False) # Sets the mouse visabilty to False, so it is not visble during play.
         self.screen = pg.display.set_mode(RES) # This sets the resolution set out in the settings.py file.
         self.clock = pg.time.Clock() # This controls the frame rate
         self.delta_time = 1 # Delta Time is the amount of time that has passed since the last frame
